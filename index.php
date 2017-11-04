@@ -5,20 +5,23 @@
         <title>Zeeslag</title>
 
         <script>
-            var boten=["1","2","3","4","5","6","7","8","9","10"];
+
             function schieten(mis) {
-                document.getElementById('nummer' + mis).value=[boten[x]];
+                document.getElementById('nummer' + mis).value = "water";
             }
             function schieten1(mis) {
                 document.getElementById('nr1' + mis).value = "water";
             }
-            function schieten2(raak) {
-                document.getElementById('nr2' + raak).value = "boot";
+            function schieten2(mis) {
+                document.getElementById('nr2' + mis).value = "water";
+            }
+            function schieten3(raak) {
+                document.getElementById('nr3' + raak).value = "boot";
             }
         </script>
 
         <style>
-            
+
             .button{
                 /*                display: box;*/
                 color: whitesmoke;
@@ -59,10 +62,14 @@
             echo "<input type=button onclick=schieten1(" . $x . ") class=button value='.'id=nr1" . $x . ">";
         }
         echo "<br>";
-        for ($x = 0; $x < 10; $x++) {
+
+        for ($x = 0; $x < 7; $x++) {
             echo "<input type=button onclick=schieten2(" . $x . ") class=button value='.'id=nr2" . $x . ">";
         }
-        echo "<br>";
+        $y = array(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
+        for ($y = 0; $y < 3; $y++) {
+        echo "<input type=button onclick=schieten3(" . $y . ") class=button value='.'id=nr3" . $y.">";
+        }
         ?>
 
 
