@@ -33,6 +33,24 @@
             function schieten8(mis) {
                 document.getElementById('nr8' + mis).value = "water";
             }
+            function schieten9(mis) {
+                document.getElementById('nr9' + mis).value = "water";
+            }
+            function schieten10(mis) {
+                document.getElementById('nr10' + mis).value = "water";
+            }
+            function schieten11(mis) {
+                document.getElementById('nr11' + mis).value = "water";
+            }
+            function schieten12(mis) {
+                document.getElementById('nr12' + mis).value = "boot";
+            }
+            function schieten13(mis) {
+                document.getElementById('nr13' + mis).value = "water";
+            }
+            function schieten14(mis) {
+                document.getElementById('nr14' + mis).value = "water";
+            }
         </script>
 
         <style>
@@ -81,7 +99,7 @@
         for ($x = 0; $x < 7; $x++) {
             echo "<input type=button onclick=schieten2(" . $x . ") class=button value='.'id=nr2" . $x . ">";
         }
-        $x = array(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
+//        $x = array(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ");
         for ($y = 0; $y < 3; $y++) {
             echo "<input type=button onclick=schieten3(" . $y . ") class=button value='.'id=nr3" . $y . ">";
         }
@@ -99,15 +117,33 @@
         for ($y = 8; $y > 7 and $y < 10; $y++) {
             echo "<input type=button onclick=schieten7(" . $y . ") class=button value='.'id=nr7" . $y . ">";
         }
-        for ($x = 9; $x==9; $x++) {
+        for ($x = 9; $x == 9; $x++) {
             echo "<input type=button onclick=schieten8(" . $x . ") class=button value='.'id=nr8" . $x . ">";
         }
         echo '<br>';
+        for ($x = 0; $x < 10; $x++) {
+            echo "<input type=button onclick=schieten9(" . $x . ") class=button value='.'id=nr9" . $x . ">";
+        }
+        echo '<br>';
+        for ($x = 0; $x < 10; $x++) {
+            echo "<input type=button onclick=schieten10(" . $x . ") class=button value='.'id=nr10" . $x . ">";
+        }
+        echo '<br>';
+        for ($x = 0; $x < 10; $x++) {
+            echo "<input type=button onclick=schieten11(" . $x . ") class=button value='.'id=nr11" . $x . ">";
+        }
+        echo '<br>';
+        for ($x = 6; $x < 10; $x++) {
+            echo "<input type=button onclick=schieten12(" . $x . ") class=button value='.'id=nr12" . $x . ">";
+        }
+        for ($y = 0; $y <6; $y++) {
+            echo "<input type=button onclick=schieten13(" . $y . ") class=button value='.'id=nr13" . $y . ">";
+        }
+        echo '<br>';
+        for ($x = 0; $x < 10; $x++) {
+            echo "<input type=button onclick=schieten14(" . $x . ") class=button value='.'id=nr14" . $x . ">";
+        }
         ?>
-
-
-
-
 
     </body>
 </html>
