@@ -6,6 +6,14 @@
 
         <script>
 
+            function mouseOver() {
+                document.getElementById("kleur").style.color = "blue";
+            }
+
+            function mouseOut() {
+                document.getElementById("kleur").style.color = "black";
+            }
+
             function schieten(mis) {
                 document.getElementById('nummer' + mis).value = "water";
             }
@@ -83,10 +91,11 @@
         </style>
     </head>
     <body>
-
-
-
         <?php
+        echo "<h1 align = center style=font-family:Courier New id =kleur onmouseover = mouseOver() onmouseout = mouseOut()>Zeeslag</h1>";
+
+
+        echo "<p align=center>"; 
         for ($x = 0; $x < 10; $x++) {
             echo "<input type=button onclick=schieten(" . $x . ") class=button value='.'id=nummer" . $x . ">";
         }
@@ -136,13 +145,14 @@
         for ($x = 6; $x < 10; $x++) {
             echo "<input type=button onclick=schieten12(" . $x . ") class=button value='.'id=nr12" . $x . ">";
         }
-        for ($y = 0; $y <6; $y++) {
+        for ($y = 0; $y < 6; $y++) {
             echo "<input type=button onclick=schieten13(" . $y . ") class=button value='.'id=nr13" . $y . ">";
         }
         echo '<br>';
         for ($x = 0; $x < 10; $x++) {
             echo "<input type=button onclick=schieten14(" . $x . ") class=button value='.'id=nr14" . $x . ">";
         }
+        echo "</p>";
         ?>
 
     </body>
